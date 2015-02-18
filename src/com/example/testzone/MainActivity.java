@@ -19,14 +19,14 @@ public class MainActivity extends Activity{
 
 
 	//private String TAG = MainActivity.class.getSimpleName();
-	
+
 	TextView s;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main); //Set contentview with instance
-		
+
 		PhoneContacts p = (PhoneContacts)new PhoneOptionsFactory(this).createPhoneOptionObject(PhoneOptionsEnum.PHONE_CONTACTS);
 		s = ((TextView)findViewById(R.id.textView));
 		try {
@@ -35,7 +35,7 @@ public class MainActivity extends Activity{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
 
 	@Override
@@ -45,16 +45,16 @@ public class MainActivity extends Activity{
 	}
 
 	@Override
-	public void onPause() {
+	public void onPause() {	
 		super.onPause();
-		
+
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// TODO Auto-generated method stub
 		menu.add("QRCode Scanner").setOnMenuItemClickListener(new OnMenuItemClickListener() {
-			
+
 			@Override
 			public boolean onMenuItemClick(MenuItem item) {
 				// TODO Auto-generated method stub
@@ -62,6 +62,17 @@ public class MainActivity extends Activity{
 				return false;
 			}
 		});
+
+		menu.add("JS Engine").setOnMenuItemClickListener(new OnMenuItemClickListener() {
+
+			@Override
+			public boolean onMenuItemClick(MenuItem item) {
+				// TODO Auto-generated method stub
+				startActivity(new Intent(MainActivity.this, JSEngineActivity.class));
+				return false;
+			}
+		});
+
 		return super.onCreateOptionsMenu(menu);
 	}
 

@@ -29,6 +29,10 @@
             android:name=".QRScannerActivity"
             android:label="@string/title_activity_qrscanner_activitiy" >
         </activity>
+        <activity
+            android:name=".JSEngineActivity"
+            android:label="@string/title_activity_jsengine" >
+        </activity>
     </application>
 
 </manifest>

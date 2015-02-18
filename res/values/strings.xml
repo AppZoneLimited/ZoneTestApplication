@@ -5,5 +5,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_qrscanner_activitiy">QRScannerActivitiy</string>
+    <string name="title_activity_jsengine">JSEngineActivity</string>
+    <string name="jshint">Enter javascript code to be executed</string>
+    <string name="eval">Evaluate Code</string>
+    <string name="evalfunc">Evaluate Function</string>
 
 </resources>
