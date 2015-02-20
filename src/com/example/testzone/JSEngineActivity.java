@@ -1,5 +1,7 @@
 package com.example.testzone;
 
+import java.util.ArrayList;
+
 import com.appzone.zone.orchestra.engine.script.interpeter.JSInterpreterEngine;
 import com.evgenii.jsevaluator.interfaces.JsCallback;
 
@@ -56,18 +58,33 @@ public class JSEngineActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				String scriptStr = "function myFunction(a, b){ return a * b; };";
+				//String scriptStr = "function myFunction(a, b){ return a * b; };";
+				
+				JSInterpreterEngine jse = new JSInterpreterEngine(JSEngineActivity.this);
+				
+				ArrayList<Object> argsArray = new ArrayList<Object>();
+				argsArray.add("4");
+				argsArray.add("4");
+				argsArray.add("4");
+				argsArray.add("4");
 
-				if(!TextUtils.isEmpty(scriptStr)){
-					JSInterpreterEngine jsEngine = new JSInterpreterEngine(JSEngineActivity.this);
-					jsEngine.evaluateScript().callFunction(scriptStr, new JsCallback() {
+				String funcName = "evaluateValues";
+				String execScript = "return parseInt(a)+parseInt(b)+parseInt(c)+parseInt(d);";
+				String args = "a, b, c, d";
+				
+				Object[] m = jse.generateArgs(argsArray.size(), argsArray);
+				
+				String funcScript = jse.generateFunction(funcName, execScript, args);
+				
+				if(!TextUtils.isEmpty(funcScript)){
+					jse.evaluateScript().callFunction(funcScript, new JsCallback() {
 
 						@Override
 						public void onResult(String arg0) {
 							// TODO Auto-generated method stub
 							new AlertDialog.Builder(JSEngineActivity.this).setMessage(arg0).create().show();;
 						}
-					}, "myFunction", 4, 5);
+					}, funcName, m);
 
 				}else{
 					new AlertDialog.Builder(JSEngineActivity.this).setMessage("Cannot evaluate empty string").create().show();;
@@ -76,8 +93,6 @@ public class JSEngineActivity extends Activity {
 			}
 		});
 
-
 	}
-
 
 }
