@@ -1,10 +1,9 @@
 package com.example.testzone;
 
-import org.json.JSONException;
-
 import com.appzone.zone.orchestra.engine.phonefunctions.PhoneOptionsEnum;
 import com.appzone.zone.orchestra.engine.phonefunctions.PhoneOptionsFactory;
 import com.appzone.zone.orchestra.engine.phonefunctions.options.PhoneContacts;
+import com.example.testzone.adapters.ContactsAdapter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,7 +11,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import android.widget.TextView;
+import android.widget.ListView;
 
 
 public class MainActivity extends Activity{
@@ -20,22 +19,17 @@ public class MainActivity extends Activity{
 
 	//private String TAG = MainActivity.class.getSimpleName();
 
-	TextView s;
+	ListView contactsList;
+	ContactsAdapter dualAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main); //Set contentview with instance
-
+		setContentView(R.layout.activity_main);
+		contactsList = (ListView)findViewById(R.id.contacts);
 		PhoneContacts p = (PhoneContacts)new PhoneOptionsFactory(this).createPhoneOptionObject(PhoneOptionsEnum.PHONE_CONTACTS);
-		s = ((TextView)findViewById(R.id.textView));
-		try {
-			s.setText("Phone Contacts :\n\n"+p.getContactsJSONArray().toString(4));
-		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
+		dualAdapter = new ContactsAdapter(this, R.layout.contacts_item, p.getContactsArray());
+		contactsList.setAdapter(dualAdapter);
 	}
 
 	@Override
