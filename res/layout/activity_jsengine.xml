@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLines="10"
-        android:minHeight="200dp"
+        android:minHeight="80dp"
         android:inputType="text"
         android:hint="@string/jshint"
         />
