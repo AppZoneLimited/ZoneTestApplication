@@ -21,4 +21,4 @@ A simple android test application to validate and test options integrated with t
 
 ![alt text](../master/imgs/js_engine_2.png?raw=true "JavaScript Engine")
 
-> Code samples would be added as iteration grows.
+> More Code samples would be added as iteration grows.
