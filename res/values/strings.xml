@@ -9,5 +9,10 @@
     <string name="jshint">Enter javascript code to be executed</string>
     <string name="eval">Evaluate Code</string>
     <string name="evalfunc">Evaluate Function</string>
-
+    <string name="genfunc">Generate Function</string>
+    <string name="hintfuncname">Enter your function name. e.g myFunction</string>
+    <string name="hintscript">Enter the body of your script. e.g return pasrseInt(a)+parseInt(b)+parseInt(d);</string>
+    <string name="hintargString">Enter the string rep of ypur arg. e.g a, b, c</string>
+    <string name="hintactualArguments">Enter the actual values of your arguments for the function. e.g 4, 6, 8</string>
+	<string name="confirm">Confirm generated method below fits your requirement.</string>
 </resources>
