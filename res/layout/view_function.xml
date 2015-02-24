@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/funcName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/hintfuncname"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:id="@+id/funcBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/hintscript"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:id="@+id/funcArg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/hintargString"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/genFunc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/genfunc" />
+    </LinearLayout>
+
+</ScrollView>

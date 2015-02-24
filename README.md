@@ -21,4 +21,16 @@ A simple android test application to validate and test options integrated with t
 
 ![alt text](../master/imgs/js_engine_2.png?raw=true "JavaScript Engine")
 
+### JavaScript Function Interpreter/Evaluator
+
+![alt text](../master/imgs/js_func_1.png?raw=true "JavaScript Function Evaluator")
+
+![alt text](../master/imgs/js_func_2.png?raw=true "JavaScript Function Evaluator")
+
+![alt text](../master/imgs/js_func_3.png?raw=true "JavaScript Function Evaluator")
+
+![alt text](../master/imgs/js_func_4.png?raw=true "JavaScript Function Evaluator")
+
+![alt text](../master/imgs/js_func_5.png?raw=true "JavaScript Function Evaluator")
+
 > More Code samples would be added as iteration grows.
