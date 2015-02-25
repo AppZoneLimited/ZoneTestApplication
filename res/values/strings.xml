@@ -14,5 +14,7 @@
     <string name="hintscript">Enter the body of your script. e.g return pasrseInt(a)+parseInt(b)+parseInt(d);</string>
     <string name="hintargString">Enter the string rep of ypur arg. e.g a, b, c</string>
     <string name="hintactualArguments">Enter the actual values of your arguments for the function. e.g 4, 6, 8</string>
-	<string name="confirm">Confirm generated method below fits your requirement.</string>
+    <string name="confirm">Confirm generated method below fits your requirement.</string>
+    <string name="title_activity_encrypt">EncryptActivity</string>
+
 </resources>

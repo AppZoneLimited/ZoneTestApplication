@@ -67,6 +67,16 @@ public class MainActivity extends Activity{
 			}
 		});
 
+		menu.add("Encryption Module").setOnMenuItemClickListener(new OnMenuItemClickListener() {
+
+			@Override
+			public boolean onMenuItemClick(MenuItem item) {
+				// TODO Auto-generated method stub
+				startActivity(new Intent(MainActivity.this, EncryptActivity.class));
+				return false;
+			}
+		});
+		
 		return super.onCreateOptionsMenu(menu);
 	}
 

@@ -33,6 +33,10 @@
             android:name=".JSEngineActivity"
             android:label="@string/title_activity_jsengine" >
         </activity>
+        <activity
+            android:name=".EncryptActivity"
+            android:label="@string/title_activity_encrypt" >
+        </activity>
     </application>
 
 </manifest>
