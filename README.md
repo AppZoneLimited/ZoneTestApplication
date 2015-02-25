@@ -33,4 +33,18 @@ A simple android test application to validate and test options integrated with t
 
 ![alt text](../master/imgs/js_func_5.png?raw=true "JavaScript Function Evaluator")
 
-> More Code samples would be added as iteration grows.
+### Encryption Modules
+
+![alt text](../master/imgs/encrypt_1.png?raw=true "Encryption Module")
+
+![alt text](../master/imgs/encrypt_2.png?raw=true "Encryption Module")
+
+### Decryption Modules
+
+![alt text](../master/imgs/decrypt_1.png?raw=true "Decryption Module")
+
+![alt text](../master/imgs/decrypt_2.png?raw=true "Decryption Module")
+
+![alt text](../master/imgs/decrypt_3.png?raw=true "Decryption Module")
+
+> More examples would be added iteratively.
