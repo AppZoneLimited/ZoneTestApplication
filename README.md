@@ -5,7 +5,7 @@ A simple android test application to validate and test options integrated with t
 
 ### Loading Phone Contacts
 
-![alt text](../master/imgs/load_contacts_1.png?raw=true "Load Contacts" =400x800)
+![alt text](../master/imgs/load_contacts_1.png?raw=true "Load Contacts")
 
 ![alt text](../master/imgs/load_contacts_2.png?raw=true "Load Contacts")
 
