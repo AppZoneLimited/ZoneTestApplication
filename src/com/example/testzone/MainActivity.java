@@ -77,6 +77,16 @@ public class MainActivity extends Activity{
 			}
 		});
 		
+		menu.add("Flow Engine").setOnMenuItemClickListener(new OnMenuItemClickListener() {
+
+			@Override
+			public boolean onMenuItemClick(MenuItem item) {
+				// TODO Auto-generated method stub
+				startActivity(new Intent(MainActivity.this, FLowActivity.class));
+				return false;
+			}
+		});
+		
 		return super.onCreateOptionsMenu(menu);
 	}
 
