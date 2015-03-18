@@ -16,6 +16,6 @@
     <string name="hintactualArguments">Enter the actual values of your arguments for the function. e.g 4, 6, 8</string>
     <string name="confirm">Confirm generated method below fits your requirement.</string>
     <string name="title_activity_encrypt">EncryptActivity</string>
-    <string name="title_activity_flow">FLow Engine Activity</string>
+    <string name="title_activity_flow">Flow Engine Activity</string>
 
 </resources>

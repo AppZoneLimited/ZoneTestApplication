@@ -82,7 +82,7 @@ public class MainActivity extends Activity{
 			@Override
 			public boolean onMenuItemClick(MenuItem item) {
 				// TODO Auto-generated method stub
-				startActivity(new Intent(MainActivity.this, FLowActivity.class));
+				startActivity(new Intent(MainActivity.this, FlowActivity.class));
 				return false;
 			}
 		});
