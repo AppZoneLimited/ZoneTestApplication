@@ -1,14 +1,12 @@
 package com.example.testzone;
 
-import java.util.Arrays;
-
 import com.appzone.zone.orchestra.engine.MobileFlow;
 import com.appzone.zone.orchestra.engine.datatypes.Step;
 import com.appzone.zone.orchestra.engine.datatypes.StepsAbstraction;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.os.Bundle;
+import android.util.Log;
 
 public class FlowActivity extends Activity {
 
@@ -16,33 +14,38 @@ public class FlowActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_flow);
-		MobileFlow mf = new MobileFlow(this);
 
+		MobileFlow mf = new MobileFlow(this); // Create flow object using json
+												// from file. An alternative
+												// would be new MobileFlow(data)
+												// Where data is a string;
 		StepsAbstraction sa = mf.getstepAbstractionion(); // Returns an object
 															// of the steps
 															// abstraction which
 															// handles steps
 
-		String initialStepId = sa.getInitialStep().getStepId();
+		Step initialStep = sa.getInitialStep();
 
-		Step nextStep = sa.getNextStep();
+		try {
+			Log.e("StepId : " + initialStep.getStepId() + " > Command :",
+					initialStep.getCommands().toString(2) + "");
+			Log.e("StepId : " + initialStep.getStepId() + " > Data :",
+					initialStep.getData().toString(2) + "");
 
-		String[] stepsId = new String[sa.noOfSteps()];
+			Step nextStep = sa.getNextStep();
 
-		stepsId[0] = initialStepId;
+			while (nextStep != null) {
+				Log.e("StepId : " + nextStep.getStepId() + " > Command :",
+						nextStep.getCommands().toString(2) + "");
+				Log.e("StepId : " + nextStep.getStepId() + " > Data :",
+						nextStep.getData().toString(2) + "");
+				nextStep = sa.getNextStep();
+			}
 
-		int i = 1;
-		while (nextStep != null) {
-			stepsId[i] = nextStep.getStepId();
-			i++;
-			nextStep = sa.getNextStep();
-
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-
-		new AlertDialog.Builder(this).setTitle("Flow Parsed Successfully")
-				.setMessage("Step Ids ->\n" + Arrays.asList(stepsId).toString()).create()
-				.show();
-		;
 
 	}
 
