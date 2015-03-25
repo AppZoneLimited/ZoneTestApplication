@@ -9,10 +9,12 @@ import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.io.Writer;
 
-import com.appzone.zone.orchestra.engine.MobileFlow;
+import org.json.JSONObject;
 
+import com.appzone.zone.orchestra.engine.MobileFlow;
 import com.appzone.zone.orchestra.engine.datatypes.Step;
 import com.appzone.zone.orchestra.engine.datatypes.StepsAbstraction;
+import com.appzone.zone.orchestra.engine.interfaces.StepResultCallback;
 
 import android.app.Activity;
 import android.content.Context;
@@ -26,32 +28,30 @@ public class FlowActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_flow);
 
-		MobileFlow mf = new MobileFlow(loadJson(this)); // Create flow object using json
-												// from file. An alternative
-												// would be new MobileFlow(data)
-												// Where data is a string;
+		MobileFlow mf = new MobileFlow(loadJson(this)); // Create flow object
+														// using json
+		// from file. An alternative
+		// would be new MobileFlow(data)
+		// Where data is a string;
 		StepsAbstraction sa = mf.getstepAbstractionion(); // Returns an object
-															// of the steps
-															// abstraction which
-															// handles steps
-
-		Step initialStep = sa.getInitialStep();
-
+		// of the steps
+		// abstraction which
+		// handles steps
 		try {
-			Log.e("StepId : " + initialStep.getStepId() + " > Command :",
-					initialStep.getCommands().toString(2) + "");
-			Log.e("StepId : " + initialStep.getStepId() + " > Data :",
-					initialStep.getData().toString(2) + "");
-
-			Step nextStep = sa.getNextStep();
-
-			while (nextStep != null) {
-				Log.e("StepId : " + nextStep.getStepId() + " > Command :",
-						nextStep.getCommands().toString(2) + "");
-				Log.e("StepId : " + nextStep.getStepId() + " > Data :",
-						nextStep.getData().toString(2) + "");
-				nextStep = sa.getNextStep();
-			}
+			
+			sa.setStepResultCallBack(new StepResultCallback() {
+				
+				@Override
+				public void onStepResult(Step step, JSONObject result) {
+					// TODO Auto-generated method stub
+					Log.e("StepId", step.getStepId());
+					if (result == null) {
+						Log.e("Null", result + "");
+					} else {
+						Log.e("Not Null", result.toString());
+					}
+				}
+			});
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -59,7 +59,7 @@ public class FlowActivity extends Activity {
 		}
 
 	}
-	
+
 	/*
 	 * This is a method for loading string from text file
 	 */
