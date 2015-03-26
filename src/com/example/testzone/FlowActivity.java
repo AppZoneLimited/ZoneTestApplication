@@ -24,7 +24,7 @@ import android.util.Log;
 
 public class FlowActivity extends Activity {
 
-	private final String TAG = this.getClass().getSimpleName();
+	final String TAG = this.getClass().getSimpleName();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
