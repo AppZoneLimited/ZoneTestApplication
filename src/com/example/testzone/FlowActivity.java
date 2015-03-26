@@ -21,8 +21,11 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 
+
 public class FlowActivity extends Activity {
 
+	private final String TAG = this.getClass().getSimpleName();
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -37,22 +40,39 @@ public class FlowActivity extends Activity {
 		// of the steps
 		// abstraction which
 		// handles steps
+		
+		
 		try {
+			//Null is based on the assumption that the result has been set for the each step
+			Step initStep = sa.getNextStep();
 			
-			sa.setStepResultCallBack(new StepResultCallback() {
+			//Do whatever you want with step here\
+			
+			
+			//
+			
+			//Dummy result
+			JSONObject result = new JSONObject();
+			
+			//Set step result
+			initStep.setStepResult(result, sa, new StepResultCallback() {
 				
 				@Override
-				public void onStepResult(Step step, JSONObject result) {
+				public void onStepResult(StepsAbstraction stepAbstraction, Step s,
+						JSONObject result) {
+					// TODO returns current step abstraction, current step and current step result
+					//Any manipulation you want can be done here with the objects
+					Log.e("OnStepResult", s.getStepId());
+					return;
+				}
+				
+				@Override
+				public void onGetNextStep(Step nextStep) {
 					// TODO Auto-generated method stub
-					Log.e("StepId", step.getStepId());
-					if (result == null) {
-						Log.e("Null", result + "");
-					} else {
-						Log.e("Not Null", result.toString());
-					}
+					//Returns next step, you can proceed from here
+					Log.e("OnGetNextStep", nextStep.getStepId());
 				}
 			});
-
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
