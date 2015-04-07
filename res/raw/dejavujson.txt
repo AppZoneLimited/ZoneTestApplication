@@ -1,231 +1,258 @@
 {
-  "Name": "Edit Corporate",
-  "Variables": [
-    "Corporate"
-  ],
-  "InitialStepID": "8d3deeb5-6583-4146-911c-ecf76503362c",
-  "InitialFields": [
-    {
-      "Field": "Corporate",
-      "FieldType": "Entity",
-      "SourceType": "Variable",
-      "ValueSource": null,
-      "SubMappings": {
-        "ID": {
-          "Field": "ID",
-          "FieldType": "Default",
-          "SourceType": "Event",
-          "ValueSource": null,
-          "SubMappings": {}
-        },
-        "Name": {
-          "Field": "Name",
-          "FieldType": "Default",
-          "SourceType": "Event",
-          "ValueSource": null,
-          "SubMappings": {}
-        },
-        "Address": {
-          "Field": "Address",
-          "FieldType": "Default",
-          "SourceType": "Event",
-          "ValueSource": null,
-          "SubMappings": {}
-        },
-        "Email": {
-          
-          "Field": "Email",
-          "FieldType": "Default",
-          "SourceType": "Event",
-          "ValueSource": null,
-          "SubMappings": {}
-        },
-        "Phone": {
-          
-          "Field": "Phone",
-          "FieldType": "Default",
-          "SourceType": "Event",
-          "ValueSource": null,
-          "SubMappings": {}
-        },
-        "RC Number": {
-          
-          "Field": "RC Number",
-          "FieldType": "Default",
-          "SourceType": "Event",
-          "ValueSource": null,
-          "SubMappings": {}
-        },
-        "Code": {
-          
-          "Field": "Code",
-          "FieldType": "Default",
-          "SourceType": "Event",
-          "ValueSource": null,
-          "SubMappings": {}
-        },
-        "Business Category": {
-          
-          "Field": "Business Category",
-          "FieldType": "Default",
-          "SourceType": "Event",
-          "ValueSource": null,
-          "SubMappings": {}
-        },
-        "Logo Path": {
-          
-          "Field": "Logo Path",
-          "FieldType": "Default",
-          "SourceType": "Event",
-          "ValueSource": null,
-          "SubMappings": {}
-        },
-        "IsDeleted": {
-          
-          "Field": "IsDeleted",
-          "FieldType": "Default",
-          "SourceType": "Event",
-          "ValueSource": null,
-          "SubMappings": {}
-        },
-        "Branches": {
-          
-          "Field": "Branches",
-          "FieldType": "EntityList",
-          "SourceType": "Event",
-          "ValueSource": null,
-          "SubMappings": {}
-        },
-        "ParentCorporate": {
-          
-          "Field": "ParentCorporate",
-          "FieldType": "Entity",
-          "SourceType": "Event",
-          "ValueSource": null,
-          "SubMappings": {}
-        }
+   "Id":"ed48b8b8-60ab-47ba-9f05-82f9f55dac1e",
+   "Name":"Create Corporate",
+   "Variables":[
+
+   ],
+   "InitialStepID":"253f4bf4-5923-4fb6-a007-285dbda1226d",
+   "InitialFields":[
+      {
+         "Field":"Corporate",
+         "FieldType":2,
+         "SourceType":1,
+         "ValueSource":null,
+         "SubMappings":{
+
+         }
       }
-    }
-  ],
-  "Steps": {
-    "8d3deeb5-6583-4146-911c-ecf76503362c": {
-      "CommandName": "",
-      "Events": {
-        "UpdateCorporate Event": {
-           "AttachedCommands": {
-              "CommandMappings": [
-                {
-                  "Field": "Name",
-                  "FieldType": "Default",
-                  "SourceType": "Event",
-                  "ValueSource": null,
-                  "SubMappings": {}
-                },
-                {
-                  "Field": "Address",
-                  "FieldType": "Default",
-                  "SourceType": "Event",
-                  "ValueSource": null,
-                  "SubMappings": {}
-                },
-                {
-                  "Field": "Email",
-                  "FieldType": "Default",
-                  "SourceType": "Event",
-                  "ValueSource": null,
-                  "SubMappings": {}
-                },
-                {
-                  "Field": "Phone",
-                  "FieldType": "Default",
-                  "SourceType": "Event",
-                  "ValueSource": null,
-                  "SubMappings": {}
-                },
-                {
-                  "Field": "RC Number",
-                  "FieldType": "Default",
-                  "SourceType": "Event",
-                  "ValueSource": null,
-                  "SubMappings": {}
-                },
-                {
-                  "Field": "Business Category",
-                  "FieldType": "Default",
-                  "SourceType": "Event",
-                  "ValueSource": null,
-                  "SubMappings": {}
-                },
-                {
-                  "Field": "Code",
-                  "FieldType": "Default",
-                  "SourceType": "Event",
-                  "ValueSource": null,
-                  "SubMappings": {}
-                },
-                {
-                  "Field": "Logo Path",
-                  "FieldType": "Default",
-                  "SourceType": "Event",
-                  "ValueSource": null,
-                  "SubMappings": {}
-                }
-              ],
-              "StepID": "0ec0e414-9f49-4a0c-9f32-d3d7487c31bb"
+   ],
+   "Steps":{
+      "253f4bf4-5923-4fb6-a007-285dbda1226d":{
+         "CommandName":"Create Corporate",
+         "Events":{
+            "Save Clicked":{
+               "AttachedCommands":[
+                  {
+                     "CommandMappings":[
+                        {
+                           "Field":"Corporate",
+                           "FieldType":2,
+                           "SourceType":1,
+                           "ValueSource":"Corporate",
+                           "SubMappings":{
+
+                           }
+                        }
+                     ],
+                     "StepID":"fd1e4c6d-8d14-4ad9-a7ea-3d4d0df216ef"
+                  }
+               ],
+               "Name":"Save Clicked",
+               "WorkflowVariablesMapping":[
+                  {
+                     "Field":null,
+                     "FieldType":2,
+                     "SourceType":1,
+                     "ValueSource":"Corporate",
+                     "SubMappings":{
+
+                     }
+                  }
+               ]
+            }
+         },
+         "Id":"253f4bf4-5923-4fb6-a007-285dbda1226d",
+         "ServiceName":"DejaVu.UI",
+         "ServiceID":1,
+         "IsUI":true
+      },
+      "fd1e4c6d-8d14-4ad9-a7ea-3d4d0df216ef":{
+         "CommandName":"Approve Create Corporate|View Corporate Details",
+         "Events":{
+            "Request Approved":{
+               "AttachedCommands":[
+                  {
+                     "CommandMappings":[
+                        {
+                           "Field":"Corporate",
+                           "FieldType":2,
+                           "SourceType":1,
+                           "ValueSource":"Corporate",
+                           "SubMappings":{
+
+                           }
+                        }
+                     ],
+                     "StepID":"e42b5e9d-2de6-4cd9-a124-b692eb86d74c"
+                  }
+               ],
+               "Name":"Request Approved",
+               "WorkflowVariablesMapping":[
+                  {
+                     "Field":null,
+                     "FieldType":2,
+                     "SourceType":1,
+                     "ValueSource":"Corporate",
+                     "SubMappings":{
+
+                     }
+                  }
+               ]
             },
-          "Name": "UpdateCorporate Event",
-          "WorkflowVariablesMapping": [
-            {
-              "Field": "Corporate",
-              "FieldType": "Entity",
-              "SourceType": "Event",
-              "ValueSource": "Corporate",
-              "SubMappings": {}
+            "Request Declined":{
+               "AttachedCommands":[
+                  {
+                     "CommandMappings":[
+                        {
+                           "Field":"Message",
+                           "FieldType":0,
+                           "SourceType":3,
+                           "ValueSource":"Corporate Creation Declined",
+                           "SubMappings":{
+
+                           }
+                        }
+                     ],
+                     "StepID":"8cb74979-37f9-4078-ba37-2161d0479bda"
+                  }
+               ],
+               "Name":"Request Declined",
+               "WorkflowVariablesMapping":[
+                  {
+                     "Field":null,
+                     "FieldType":2,
+                     "SourceType":1,
+                     "ValueSource":"Corporate",
+                     "SubMappings":{
+
+                     }
+                  }
+               ]
+            },
+            "Request Cancelled":{
+               "AttachedCommands":[
+                  {
+                     "CommandMappings":[
+                        {
+                           "Field":"Message",
+                           "FieldType":0,
+                           "SourceType":3,
+                           "ValueSource":"Corporate Creation Cancelled",
+                           "SubMappings":{
+
+                           }
+                        }
+                     ],
+                     "StepID":"b2184315-d837-4e40-b8d1-0e217e22101f"
+                  }
+               ],
+               "Name":"Request Cancelled",
+               "WorkflowVariablesMapping":[
+                  {
+                     "Field":null,
+                     "FieldType":2,
+                     "SourceType":1,
+                     "ValueSource":"Corporate",
+                     "SubMappings":{
+
+                     }
+                  }
+               ]
             }
-          ]
-        }
+         },
+         "Id":"fd1e4c6d-8d14-4ad9-a7ea-3d4d0df216ef",
+         "ServiceName":"DejaVu.BPM",
+         "ServiceID":0,
+         "IsUI":false
       },
-      "Id": "8d3deeb5-6583-4146-911c-ecf76503362c",
-      "ServiceName": "DejaVu.UI"
-    },
-    "0ec0e414-9f49-4a0c-9f32-d3d7487c31bb": {
-      "CommandName": "Update AddedCorporate",
-      "Events": {
-        "Corporate detail has been updated successfully.": {
-          "AttachedCommands": 
-            {
-              "CommandMappings": [
-                {
-                  "Field": "Message",
-                  "FieldType": "Default",
-                  "SourceType": "Constant",
-                  "ValueSource": "Corporate detail has been updated successfully.",
-                  "SubMappings": {}
-                }
-              ],
-              "StepID": "d319050d-3c23-427d-a187-56ccb98026d3"
+      "e42b5e9d-2de6-4cd9-a124-b692eb86d74c":{
+         "CommandName":"Save Corporate Account",
+         "Events":{
+            "Corporate Created":{
+               "AttachedCommands":[
+                  {
+                     "CommandMappings":[
+                        {
+                           "Field":"Message",
+                           "FieldType":0,
+                           "SourceType":3,
+                           "ValueSource":"Corporate Created Successfully",
+                           "SubMappings":{
+
+                           }
+                        }
+                     ],
+                     "StepID":"b1d695be-0c69-43f6-b7f3-5bff6d2e5882"
+                  }
+               ],
+               "Name":"Corporate Created",
+               "WorkflowVariablesMapping":[
+                  {
+                     "Field":null,
+                     "FieldType":2,
+                     "SourceType":1,
+                     "ValueSource":"Corporate",
+                     "SubMappings":{
+
+                     }
+                  }
+               ]
+            },
+            "Account detail is stored successfully":{
+               "AttachedCommands":[
+                  {
+                     "CommandMappings":[
+                        {
+                           "Field":"Message",
+                           "FieldType":0,
+                           "SourceType":3,
+                           "ValueSource":"Save Successful",
+                           "SubMappings":{
+
+                           }
+                        }
+                     ],
+                     "StepID":"b1d695be-0c69-43f6-b7f3-5bff6d2e5882"
+                  }
+               ],
+               "Name":"Account detail is stored successfully",
+               "WorkflowVariablesMapping":[
+                  {
+                     "Field":null,
+                     "FieldType":2,
+                     "SourceType":1,
+                     "ValueSource":"Account Entity",
+                     "SubMappings":{
+
+                     }
+                  }
+               ]
             }
-          ,
-          "Name": "Corporate detail has been updated successfully.",
-          "WorkflowVariablesMapping": [
-            {
-              "Field": null,
-              "FieldType": "Entity",
-              "SourceType": "Event",
-              "ValueSource": "Corporate",
-              "SubMappings": {}
-            }
-          ]
-        }
+         },
+         "Id":"e42b5e9d-2de6-4cd9-a124-b692eb86d74c",
+         "ServiceName":"Business Banking Cloud.AccountSetUpServiceService.SaveCorporateAccount",
+         "ServiceID":3,
+         "IsUI":false
       },
-      "Id": "0ec0e414-9f49-4a0c-9f32-d3d7487c31bb",
-      "ServiceName": "BBC.CorporateSetupServiceService.UpdateAddedCorporate"
-    },
-    "d319050d-3c23-427d-a187-56ccb98026d3": {
-      "CommandName": "Display Message",
-      "Events": {},
-      "Id": "d319050d-3c23-427d-a187-56ccb98026d3",
-      "ServiceName": "DejaVu.UI"
-    }
-  }
+      "b1d695be-0c69-43f6-b7f3-5bff6d2e5882":{
+         "CommandName":"Display Message",
+         "Events":{
+
+         },
+         "Id":"b1d695be-0c69-43f6-b7f3-5bff6d2e5882",
+         "ServiceName":"DejaVu.UI",
+         "ServiceID":0,
+         "IsUI":false
+      },
+      "8cb74979-37f9-4078-ba37-2161d0479bda":{
+         "CommandName":"Display Message",
+         "Events":{
+
+         },
+         "Id":"8cb74979-37f9-4078-ba37-2161d0479bda",
+         "ServiceName":"DejaVu.UI",
+         "ServiceID":0,
+         "IsUI":false
+      },
+      "b2184315-d837-4e40-b8d1-0e217e22101f":{
+         "CommandName":"Display Message",
+         "Events":{
+
+         },
+         "Id":"b2184315-d837-4e40-b8d1-0e217e22101f",
+         "ServiceName":"DejaVu.UI",
+         "ServiceID":0,
+         "IsUI":false
+      }
+   }
 }
