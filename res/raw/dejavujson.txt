@@ -1,164 +1,846 @@
 {
-   "Id":"ed48b8b8-60ab-47ba-9f05-82f9f55dac1e",
-   "Name":"Create Corporate",
+   "Name":"Edit Corporate",
    "Variables":[
-
+      null
    ],
-   "InitialStepID":"253f4bf4-5923-4fb6-a007-285dbda1226d",
+   "InitialStepID":"8d1deeb5-6581-4146-911c-ecf76501162c",
    "InitialFields":[
       {
          "Field":"Corporate",
          "FieldType":2,
-         "SourceType":1,
-         "ValueSource":null,
+         "SourceType":2,
          "SubMappings":{
-
-         }
+            "ID":{
+               "Field":"ID",
+               "FieldType":0,
+               "SourceType":1,
+               "SubMappings":null,
+               "ValueSource":null,
+               "type":5,
+               "id":11
+            },
+            "Name":{
+               "Field":"Name",
+               "FieldType":0,
+               "SourceType":1,
+               "SubMappings":null,
+               "ValueSource":null,
+               "type":2,
+               "id":12
+            },
+            "Address":{
+               "Field":"Address",
+               "FieldType":0,
+               "SourceType":1,
+               "SubMappings":null,
+               "ValueSource":null,
+               "type":7,
+               "id":11
+            },
+            "Email":{
+               "Field":"Email",
+               "FieldType":0,
+               "SourceType":1,
+               "SubMappings":null,
+               "ValueSource":null,
+               "type":4,
+               "id":14
+            },
+            "Phone":{
+               "Field":"Phone",
+               "FieldType":0,
+               "SourceType":1,
+               "SubMappings":null,
+               "ValueSource":null,
+               "type":5,
+               "id":15
+            },
+            "RC Number":{
+               "Field":"RC Number",
+               "FieldType":0,
+               "SourceType":1,
+               "SubMappings":null,
+               "ValueSource":null,
+               "type":6,
+               "id":16
+            },
+            "Code":{
+               "Field":"Code",
+               "FieldType":0,
+               "SourceType":1,
+               "SubMappings":null,
+               "ValueSource":null,
+               "type":7,
+               "id":17
+            },
+            "Business Category":{
+               "Field":"RC Number",
+               "FieldType":0,
+               "SourceType":1,
+               "SubMappings":null,
+               "ValueSource":null,
+               "type":8,
+               "id":18
+            },
+            "Logo Path":{
+               "Field":"Logo Path",
+               "FieldType":0,
+               "SourceType":1,
+               "SubMappings":null,
+               "ValueSource":null,
+               "type":7,
+               "id":18
+            },
+            "IsDeleted":{
+               "Field":"IsDeleted",
+               "FieldType":0,
+               "SourceType":1,
+               "SubMappings":null,
+               "ValueSource":null,
+               "type":7,
+               "id":18
+            },
+            "Branches":{
+               "Field":"Branches",
+               "FieldType":0,
+               "SourceType":1,
+               "SubMappings":null,
+               "ValueSource":null,
+               "type":0,
+               "id":0
+            },
+            "ParentCorporate":{
+               "Field":"ParentCorporate",
+               "FieldType":0,
+               "SourceType":1,
+               "SubMappings":null,
+               "ValueSource":null,
+               "type":7,
+               "id":18
+            }
+         },
+         "ValueSource":null,
+         "type":0,
+         "id":0
       }
    ],
    "Steps":{
-      "253f4bf4-5923-4fb6-a007-285dbda1226d":{
-         "CommandName":"Create Corporate",
+      "8d1deeb5-6581-4146-911c-ecf76501162c":{
+         "CommandName":{
+            "Name":"Create Account",
+            "Description":"Page to Create Account",
+            "IsNew":true,
+            "Sections":[
+               {
+                  "Name":"Account Info",
+                  "NumberOfColumn":2,
+                  "Parent":null,
+                  "RowNumber":1,
+                  "IsColumn":false,
+                  "Buttons":[
+
+                  ],
+                  "Fields":[
+
+                  ],
+                  "ID":1098,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               },
+               {
+                  "Name":"section827f",
+                  "NumberOfColumn":0,
+                  "Parent":{
+                     "Name":"Account Info",
+                     "NumberOfColumn":2,
+                     "Parent":null,
+                     "RowNumber":1,
+                     "IsColumn":false,
+                     "Buttons":[
+
+                     ],
+                     "Fields":[
+
+                     ],
+                     "ID":1098,
+                     "IsToSave":false,
+                     "VersionNumber":null,
+                     "InstitutionCode":null,
+                     "SuccessMessage":null,
+                     "FailureMessage":null
+                  },
+                  "RowNumber":1,
+                  "IsColumn":true,
+                  "Buttons":[
+
+                  ],
+                  "Fields":[
+                     {
+                        "Name":"Name",
+                        "Type":"SingleLineField",
+                        "DatasourceType":1,
+                        "SectionColumn":null,
+                        "Spec":{
+                           "IsRequired":true,
+                           "IsPrimaryIdentifier":false,
+                           "IsUnique":false,
+                           "IsEditable":false,
+                           "IsNotEditable":false,
+                           "FixedLength":0,
+                           "MinimumLength":0,
+                           "MaximumLength":0,
+                           "Format":{
+                              "Name":"String",
+                              "RegexFormat":null,
+                              "Validation":{
+                                 "Name":"Regular Expression Validator",
+                                 "FullLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression, DejaVu.Automation.ValidationModule",
+                                 "LibraryPath":"DejaVu.ParameterValidation.RegEx.Module.dll",
+                                 "ShortLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression",
+                                 "ID":1,
+                                 "IsToSave":false,
+                                 "VersionNumber":null,
+                                 "InstitutionCode":null,
+                                 "SuccessMessage":null,
+                                 "FailureMessage":null
+                              },
+                              "ValidationFields":{
+                                 "RegularExpression":"^.*$"
+                              },
+                              "ID":49,
+                              "IsToSave":false,
+                              "VersionNumber":null,
+                              "InstitutionCode":null,
+                              "SuccessMessage":null,
+                              "FailureMessage":null
+                           },
+                           "ParameterMode":"Custom",
+                           "ID":16208,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "IsCustom":false,
+                        "SourceContent":"",
+                        "RowNumber":1,
+                        "CustomSpec":null,
+                        "EntitySource":null,
+                        "TheMatchMode":0,
+                        "ID":2365,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     {
+                        "Name":"Account Type",
+                        "Type":"SingleSelection",
+                        "DatasourceType":2,
+                        "SectionColumn":null,
+                        "Spec":{
+                           "IsRequired":false,
+                           "IsPrimaryIdentifier":false,
+                           "IsUnique":false,
+                           "IsEditable":false,
+                           "IsNotEditable":false,
+                           "FixedLength":0,
+                           "MinimumLength":0,
+                           "MaximumLength":0,
+                           "Format":{
+                              "Name":"Account Type",
+                              "RegexFormat":null,
+                              "Validation":{
+                                 "Name":"Options Validation",
+                                 "FullLibraryName":"DejaVu.Automation.ValidationModule.OptionsValidation, DejaVu.Automation.ValidationModule",
+                                 "LibraryPath":null,
+                                 "ShortLibraryName":"DejaVu.Automation.ValidationModule.OptionsValidation",
+                                 "ID":3,
+                                 "IsToSave":false,
+                                 "VersionNumber":null,
+                                 "InstitutionCode":null,
+                                 "SuccessMessage":null,
+                                 "FailureMessage":null
+                              },
+                              "ValidationFields":{
+                                 "Options":"Default,Savings,Current"
+                              },
+                              "ID":35,
+                              "IsToSave":false,
+                              "VersionNumber":null,
+                              "InstitutionCode":null,
+                              "SuccessMessage":null,
+                              "FailureMessage":null
+                           },
+                           "ParameterMode":"Custom",
+                           "ID":16211,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "IsCustom":false,
+                        "SourceContent":"Savings,Current",
+                        "RowNumber":2,
+                        "CustomSpec":null,
+                        "EntitySource":null,
+                        "TheMatchMode":0,
+                        "ID":2366,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     }
+                  ],
+                  "ID":1099,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               },
+               {
+                  "Name":"sectiond772",
+                  "NumberOfColumn":0,
+                  "Parent":{
+                     "Name":"Account Info",
+                     "NumberOfColumn":2,
+                     "Parent":null,
+                     "RowNumber":1,
+                     "IsColumn":false,
+                     "Buttons":[
+
+                     ],
+                     "Fields":[
+
+                     ],
+                     "ID":1098,
+                     "IsToSave":false,
+                     "VersionNumber":null,
+                     "InstitutionCode":null,
+                     "SuccessMessage":null,
+                     "FailureMessage":null
+                  },
+                  "RowNumber":1,
+                  "IsColumn":true,
+                  "Buttons":[
+
+                  ],
+                  "Fields":[
+                     {
+                        "Name":"Number",
+                        "Type":"SingleLineField",
+                        "DatasourceType":1,
+                        "SectionColumn":null,
+                        "Spec":{
+                           "IsRequired":true,
+                           "IsPrimaryIdentifier":true,
+                           "IsUnique":false,
+                           "IsEditable":false,
+                           "IsNotEditable":false,
+                           "FixedLength":0,
+                           "MinimumLength":0,
+                           "MaximumLength":0,
+                           "Format":{
+                              "Name":"10-Digit Code",
+                              "RegexFormat":null,
+                              "Validation":{
+                                 "Name":"Regular Expression Validator",
+                                 "FullLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression, DejaVu.Automation.ValidationModule",
+                                 "LibraryPath":"DejaVu.ParameterValidation.RegEx.Module.dll",
+                                 "ShortLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression",
+                                 "ID":1,
+                                 "IsToSave":false,
+                                 "VersionNumber":null,
+                                 "InstitutionCode":null,
+                                 "SuccessMessage":null,
+                                 "FailureMessage":null
+                              },
+                              "ValidationFields":{
+                                 "RegularExpression":"^\\d{10}$"
+                              },
+                              "ID":23,
+                              "IsToSave":false,
+                              "VersionNumber":null,
+                              "InstitutionCode":null,
+                              "SuccessMessage":null,
+                              "FailureMessage":null
+                           },
+                           "ParameterMode":"Custom",
+                           "ID":16209,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "IsCustom":false,
+                        "SourceContent":"",
+                        "RowNumber":1,
+                        "CustomSpec":null,
+                        "EntitySource":null,
+                        "TheMatchMode":0,
+                        "ID":2367,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     {
+                        "Name":"Account Category",
+                        "Type":"SingleSelection",
+                        "DatasourceType":2,
+                        "SectionColumn":null,
+                        "Spec":{
+                           "IsRequired":false,
+                           "IsPrimaryIdentifier":false,
+                           "IsUnique":false,
+                           "IsEditable":false,
+                           "IsNotEditable":false,
+                           "FixedLength":0,
+                           "MinimumLength":0,
+                           "MaximumLength":0,
+                           "Format":{
+                              "Name":"Account Category",
+                              "RegexFormat":null,
+                              "Validation":{
+                                 "Name":"Options Validation",
+                                 "FullLibraryName":"DejaVu.Automation.ValidationModule.OptionsValidation, DejaVu.Automation.ValidationModule",
+                                 "LibraryPath":null,
+                                 "ShortLibraryName":"DejaVu.Automation.ValidationModule.OptionsValidation",
+                                 "ID":3,
+                                 "IsToSave":false,
+                                 "VersionNumber":null,
+                                 "InstitutionCode":null,
+                                 "SuccessMessage":null,
+                                 "FailureMessage":null
+                              },
+                              "ValidationFields":{
+                                 "Options":"Null,Receivable,Payable"
+                              },
+                              "ID":36,
+                              "IsToSave":false,
+                              "VersionNumber":null,
+                              "InstitutionCode":null,
+                              "SuccessMessage":null,
+                              "FailureMessage":null
+                           },
+                           "ParameterMode":"Custom",
+                           "ID":16212,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "IsCustom":false,
+                        "SourceContent":"Receivable,Payable",
+                        "RowNumber":2,
+                        "CustomSpec":null,
+                        "EntitySource":null,
+                        "TheMatchMode":0,
+                        "ID":2368,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     }
+                  ],
+                  "ID":1100,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               }
+            ],
+            "Buttons":[
+               {
+                  "ButtonName":"Next",
+                  "Name":"Save Clicked",
+                  "SectionColumn":null,
+                  "ID":128,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               }
+            ],
+            "AllFields":[
+               {
+                  "Name":"Name",
+                  "Type":"SingleLineField",
+                  "DatasourceType":1,
+                  "SectionColumn":null,
+                  "Spec":{
+                     "IsRequired":true,
+                     "IsPrimaryIdentifier":false,
+                     "IsUnique":false,
+                     "IsEditable":false,
+                     "IsNotEditable":false,
+                     "FixedLength":0,
+                     "MinimumLength":0,
+                     "MaximumLength":0,
+                     "Format":{
+                        "Name":"String",
+                        "RegexFormat":null,
+                        "Validation":{
+                           "Name":"Regular Expression Validator",
+                           "FullLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression, DejaVu.Automation.ValidationModule",
+                           "LibraryPath":"DejaVu.ParameterValidation.RegEx.Module.dll",
+                           "ShortLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression",
+                           "ID":1,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "ValidationFields":{
+                           "RegularExpression":"^.*$"
+                        },
+                        "ID":49,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     "ParameterMode":"Custom",
+                     "ID":16208,
+                     "IsToSave":false,
+                     "VersionNumber":null,
+                     "InstitutionCode":null,
+                     "SuccessMessage":null,
+                     "FailureMessage":null
+                  },
+                  "IsCustom":false,
+                  "SourceContent":"",
+                  "RowNumber":1,
+                  "CustomSpec":null,
+                  "EntitySource":null,
+                  "TheMatchMode":0,
+                  "ID":2365,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               },
+               {
+                  "Name":"Account Type",
+                  "Type":"SingleSelection",
+                  "DatasourceType":2,
+                  "SectionColumn":null,
+                  "Spec":{
+                     "IsRequired":false,
+                     "IsPrimaryIdentifier":false,
+                     "IsUnique":false,
+                     "IsEditable":false,
+                     "IsNotEditable":false,
+                     "FixedLength":0,
+                     "MinimumLength":0,
+                     "MaximumLength":0,
+                     "Format":{
+                        "Name":"Account Type",
+                        "RegexFormat":null,
+                        "Validation":{
+                           "Name":"Options Validation",
+                           "FullLibraryName":"DejaVu.Automation.ValidationModule.OptionsValidation, DejaVu.Automation.ValidationModule",
+                           "LibraryPath":null,
+                           "ShortLibraryName":"DejaVu.Automation.ValidationModule.OptionsValidation",
+                           "ID":3,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "ValidationFields":{
+                           "Options":"Default,Savings,Current"
+                        },
+                        "ID":35,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     "ParameterMode":"Custom",
+                     "ID":16211,
+                     "IsToSave":false,
+                     "VersionNumber":null,
+                     "InstitutionCode":null,
+                     "SuccessMessage":null,
+                     "FailureMessage":null
+                  },
+                  "IsCustom":false,
+                  "SourceContent":"Savings,Current",
+                  "RowNumber":2,
+                  "CustomSpec":null,
+                  "EntitySource":null,
+                  "TheMatchMode":0,
+                  "ID":2366,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               },
+               {
+                  "Name":"Number",
+                  "Type":"SingleLineField",
+                  "DatasourceType":1,
+                  "SectionColumn":null,
+                  "Spec":{
+                     "IsRequired":true,
+                     "IsPrimaryIdentifier":true,
+                     "IsUnique":false,
+                     "IsEditable":false,
+                     "IsNotEditable":false,
+                     "FixedLength":0,
+                     "MinimumLength":0,
+                     "MaximumLength":0,
+                     "Format":{
+                        "Name":"10-Digit Code",
+                        "RegexFormat":null,
+                        "Validation":{
+                           "Name":"Regular Expression Validator",
+                           "FullLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression, DejaVu.Automation.ValidationModule",
+                           "LibraryPath":"DejaVu.ParameterValidation.RegEx.Module.dll",
+                           "ShortLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression",
+                           "ID":1,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "ValidationFields":{
+                           "RegularExpression":"^\\d{10}$"
+                        },
+                        "ID":23,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     "ParameterMode":"Custom",
+                     "ID":16209,
+                     "IsToSave":false,
+                     "VersionNumber":null,
+                     "InstitutionCode":null,
+                     "SuccessMessage":null,
+                     "FailureMessage":null
+                  },
+                  "IsCustom":false,
+                  "SourceContent":"",
+                  "RowNumber":1,
+                  "CustomSpec":null,
+                  "EntitySource":null,
+                  "TheMatchMode":0,
+                  "ID":2367,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               },
+               {
+                  "Name":"Account Category",
+                  "Type":"SingleSelection",
+                  "DatasourceType":2,
+                  "SectionColumn":null,
+                  "Spec":{
+                     "IsRequired":false,
+                     "IsPrimaryIdentifier":false,
+                     "IsUnique":false,
+                     "IsEditable":false,
+                     "IsNotEditable":false,
+                     "FixedLength":0,
+                     "MinimumLength":0,
+                     "MaximumLength":0,
+                     "Format":{
+                        "Name":"Account Category",
+                        "RegexFormat":null,
+                        "Validation":{
+                           "Name":"Options Validation",
+                           "FullLibraryName":"DejaVu.Automation.ValidationModule.OptionsValidation, DejaVu.Automation.ValidationModule",
+                           "LibraryPath":null,
+                           "ShortLibraryName":"DejaVu.Automation.ValidationModule.OptionsValidation",
+                           "ID":3,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "ValidationFields":{
+                           "Options":"Null,Receivable,Payable"
+                        },
+                        "ID":36,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     "ParameterMode":"Custom",
+                     "ID":16212,
+                     "IsToSave":false,
+                     "VersionNumber":null,
+                     "InstitutionCode":null,
+                     "SuccessMessage":null,
+                     "FailureMessage":null
+                  },
+                  "IsCustom":false,
+                  "SourceContent":"Receivable,Payable",
+                  "RowNumber":2,
+                  "CustomSpec":null,
+                  "EntitySource":null,
+                  "TheMatchMode":0,
+                  "ID":2368,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               }
+            ],
+            "Implementation":"DejaVu.UI",
+            "Category":{
+               "Name":"Account Management",
+               "Description":"This is for grouping accounts",
+               "ID":16,
+               "IsToSave":false,
+               "VersionNumber":null,
+               "InstitutionCode":null,
+               "SuccessMessage":null,
+               "FailureMessage":null
+            },
+            "ID":240,
+            "IsToSave":false,
+            "VersionNumber":null,
+            "InstitutionCode":null,
+            "SuccessMessage":null,
+            "FailureMessage":null
+         },
          "Events":{
-            "Save Clicked":{
+            "UpdateCorporate Event":{
                "AttachedCommands":[
                   {
                      "CommandMappings":[
                         {
-                           "Field":"Corporate",
-                           "FieldType":2,
+                           "Field":"Name",
+                           "FieldType":0,
                            "SourceType":1,
-                           "ValueSource":"Corporate",
-                           "SubMappings":{
-
-                           }
-                        }
-                     ],
-                     "StepID":"fd1e4c6d-8d14-4ad9-a7ea-3d4d0df216ef"
-                  }
-               ],
-               "Name":"Save Clicked",
-               "WorkflowVariablesMapping":[
-                  {
-                     "Field":null,
-                     "FieldType":2,
-                     "SourceType":1,
-                     "ValueSource":"Corporate",
-                     "SubMappings":{
-
-                     }
-                  }
-               ]
-            }
-         },
-         "Id":"253f4bf4-5923-4fb6-a007-285dbda1226d",
-         "ServiceName":"DejaVu.UI",
-         "ServiceID":1,
-         "IsUI":true
-      },
-      "fd1e4c6d-8d14-4ad9-a7ea-3d4d0df216ef":{
-         "CommandName":"Approve Create Corporate|View Corporate Details",
-         "Events":{
-            "Request Approved":{
-               "AttachedCommands":[
-                  {
-                     "CommandMappings":[
+                           "SubMappings":null,
+                           "ValueSource":null,
+                           "type":1,
+                           "id":11
+                        },
                         {
-                           "Field":"Corporate",
-                           "FieldType":2,
+                           "Field":"Address",
+                           "FieldType":0,
                            "SourceType":1,
-                           "ValueSource":"Corporate",
-                           "SubMappings":{
-
-                           }
-                        }
-                     ],
-                     "StepID":"e42b5e9d-2de6-4cd9-a124-b692eb86d74c"
-                  }
-               ],
-               "Name":"Request Approved",
-               "WorkflowVariablesMapping":[
-                  {
-                     "Field":null,
-                     "FieldType":2,
-                     "SourceType":1,
-                     "ValueSource":"Corporate",
-                     "SubMappings":{
-
-                     }
-                  }
-               ]
-            },
-            "Request Declined":{
-               "AttachedCommands":[
-                  {
-                     "CommandMappings":[
+                           "SubMappings":null,
+                           "ValueSource":null,
+                           "type":12,
+                           "id":11
+                        },
                         {
-                           "Field":"Message",
+                           "Field":"Email",
                            "FieldType":0,
-                           "SourceType":3,
-                           "ValueSource":"Corporate Creation Declined",
-                           "SubMappings":{
-
-                           }
-                        }
-                     ],
-                     "StepID":"8cb74979-37f9-4078-ba37-2161d0479bda"
-                  }
-               ],
-               "Name":"Request Declined",
-               "WorkflowVariablesMapping":[
-                  {
-                     "Field":null,
-                     "FieldType":2,
-                     "SourceType":1,
-                     "ValueSource":"Corporate",
-                     "SubMappings":{
-
-                     }
-                  }
-               ]
-            },
-            "Request Cancelled":{
-               "AttachedCommands":[
-                  {
-                     "CommandMappings":[
+                           "SourceType":1,
+                           "SubMappings":null,
+                           "ValueSource":null,
+                           "type":10,
+                           "id":11
+                        },
                         {
-                           "Field":"Message",
+                           "Field":"Phone",
                            "FieldType":0,
-                           "SourceType":3,
-                           "ValueSource":"Corporate Creation Cancelled",
-                           "SubMappings":{
-
-                           }
+                           "SourceType":1,
+                           "SubMappings":null,
+                           "ValueSource":null,
+                           "type":7,
+                           "id":11
+                        },
+                        {
+                           "Field":"RC Number",
+                           "FieldType":0,
+                           "SourceType":1,
+                           "SubMappings":null,
+                           "ValueSource":null,
+                           "type":18,
+                           "id":11
+                        },
+                        {
+                           "Field":"Business Category",
+                           "FieldType":0,
+                           "SourceType":1,
+                           "SubMappings":null,
+                           "ValueSource":null,
+                           "type":5,
+                           "id":11
+                        },
+                        {
+                           "Field":"Code",
+                           "FieldType":0,
+                           "SourceType":1,
+                           "SubMappings":null,
+                           "ValueSource":null,
+                           "type":3,
+                           "id":11
+                        },
+                        {
+                           "Field":"Logo Path",
+                           "FieldType":0,
+                           "SourceType":1,
+                           "SubMappings":null,
+                           "ValueSource":null,
+                           "type":16,
+                           "id":11
                         }
                      ],
-                     "StepID":"b2184315-d837-4e40-b8d1-0e217e22101f"
+                     "StepID":"0ec0e414-9f49-4a0c-9f12-d1d7487c11bb"
                   }
                ],
-               "Name":"Request Cancelled",
+               "Name":"UpdateCorporate Event",
                "WorkflowVariablesMapping":[
                   {
-                     "Field":null,
+                     "Field":"Corporate",
                      "FieldType":2,
                      "SourceType":1,
+                     "SubMappings":null,
                      "ValueSource":"Corporate",
-                     "SubMappings":{
-
-                     }
+                     "type":0,
+                     "id":0
                   }
                ]
             }
          },
-         "Id":"fd1e4c6d-8d14-4ad9-a7ea-3d4d0df216ef",
-         "ServiceName":"DejaVu.BPM",
-         "ServiceID":0,
-         "IsUI":false
+         "Id":"8d1deeb5-6581-4146-911c-ecf76501162c",
+         "ServiceName":"DejaVu.UI"
       },
-      "e42b5e9d-2de6-4cd9-a124-b692eb86d74c":{
-         "CommandName":"Save Corporate Account",
+
+      "0ec0e414-9f49-4a0c-9f12-d1d7487c11bb":{
+         "CommandName":{"Name":"Create Bank"
+         },
+
          "Events":{
-            "Corporate Created":{
+            "Corporate detail has been updated successfully.":{
                "AttachedCommands":[
                   {
                      "CommandMappings":[
@@ -166,93 +848,914 @@
                            "Field":"Message",
                            "FieldType":0,
                            "SourceType":3,
-                           "ValueSource":"Corporate Created Successfully",
-                           "SubMappings":{
-
-                           }
+                           "SubMappings":null,
+                           "ValueSource":"Corporate detail has been updated successfully.",
+                           "type":3,
+                           "id":11
                         }
                      ],
-                     "StepID":"b1d695be-0c69-43f6-b7f3-5bff6d2e5882"
+                     "StepID":"d119050d-1c21-427d-a187-56ccb98026d1"
                   }
                ],
-               "Name":"Corporate Created",
+               "Name":"Corporate detail has been updated successfully.",
                "WorkflowVariablesMapping":[
                   {
                      "Field":null,
                      "FieldType":2,
                      "SourceType":1,
+                     "SubMappings":null,
                      "ValueSource":"Corporate",
-                     "SubMappings":{
-
-                     }
-                  }
-               ]
-            },
-            "Account detail is stored successfully":{
-               "AttachedCommands":[
-                  {
-                     "CommandMappings":[
-                        {
-                           "Field":"Message",
-                           "FieldType":0,
-                           "SourceType":3,
-                           "ValueSource":"Save Successful",
-                           "SubMappings":{
-
-                           }
-                        }
-                     ],
-                     "StepID":"b1d695be-0c69-43f6-b7f3-5bff6d2e5882"
-                  }
-               ],
-               "Name":"Account detail is stored successfully",
-               "WorkflowVariablesMapping":[
-                  {
-                     "Field":null,
-                     "FieldType":2,
-                     "SourceType":1,
-                     "ValueSource":"Account Entity",
-                     "SubMappings":{
-
-                     }
+                     "type":0,
+                     "id":0
                   }
                ]
             }
          },
-         "Id":"e42b5e9d-2de6-4cd9-a124-b692eb86d74c",
-         "ServiceName":"Business Banking Cloud.AccountSetUpServiceService.SaveCorporateAccount",
-         "ServiceID":3,
-         "IsUI":false
+         "Id":"0ec0e414-9f49-4a0c-9f12-d1d7487c11bb",
+         "ServiceName":"BBC.CorporateSetupServiceService.UpdateAddedCorporate"
       },
-      "b1d695be-0c69-43f6-b7f3-5bff6d2e5882":{
-         "CommandName":"Display Message",
-         "Events":{
+      "d119050d-1c21-427d-a187-56ccb98026d1":{
+         "CommandName":{
+            "Name":"View Bank Details",
+            "Description":"Views Bank Details",
+            "IsNew":true,
+            "Sections":[
+               {
+                  "Name":"Bank Detail",
+                  "NumberOfColumn":2,
+                  "Parent":null,
+                  "RowNumber":1,
+                  "IsColumn":false,
+                  "Buttons":[
 
-         },
-         "Id":"b1d695be-0c69-43f6-b7f3-5bff6d2e5882",
-         "ServiceName":"DejaVu.UI",
-         "ServiceID":0,
-         "IsUI":false
-      },
-      "8cb74979-37f9-4078-ba37-2161d0479bda":{
-         "CommandName":"Display Message",
-         "Events":{
+                  ],
+                  "Fields":[
 
-         },
-         "Id":"8cb74979-37f9-4078-ba37-2161d0479bda",
-         "ServiceName":"DejaVu.UI",
-         "ServiceID":0,
-         "IsUI":false
-      },
-      "b2184315-d837-4e40-b8d1-0e217e22101f":{
-         "CommandName":"Display Message",
-         "Events":{
+                  ],
+                  "ID":16,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               },
+               {
+                  "Name":"section5923",
+                  "NumberOfColumn":0,
+                  "Parent":{
+                     "Name":"Bank Detail",
+                     "NumberOfColumn":2,
+                     "Parent":null,
+                     "RowNumber":1,
+                     "IsColumn":false,
+                     "Buttons":[
 
+                     ],
+                     "Fields":[
+
+                     ],
+                     "ID":16,
+                     "IsToSave":false,
+                     "VersionNumber":null,
+                     "InstitutionCode":null,
+                     "SuccessMessage":null,
+                     "FailureMessage":null
+                  },
+                  "RowNumber":1,
+                  "IsColumn":true,
+                  "Buttons":[
+
+                  ],
+                  "Fields":[
+                     {
+                        "Name":"Name",
+                        "Type":"ReadOnly",
+                        "DatasourceType":1,
+                        "SectionColumn":null,
+                        "Spec":{
+                           "IsRequired":true,
+                           "IsPrimaryIdentifier":false,
+                           "IsUnique":false,
+                           "IsEditable":false,
+                           "IsNotEditable":false,
+                           "FixedLength":0,
+                           "MinimumLength":0,
+                           "MaximumLength":0,
+                           "Format":{
+                              "Name":"AlphaNumeric",
+                              "RegexFormat":null,
+                              "Validation":{
+                                 "Name":"Regular Expression Validator",
+                                 "FullLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression, DejaVu.Automation.ValidationModule",
+                                 "LibraryPath":"DejaVu.ParameterValidation.RegEx.Module.dll",
+                                 "ShortLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression",
+                                 "ID":1,
+                                 "IsToSave":false,
+                                 "VersionNumber":null,
+                                 "InstitutionCode":null,
+                                 "SuccessMessage":null,
+                                 "FailureMessage":null
+                              },
+                              "ValidationFields":{
+                                 "RegularExpression":"^[-\\w\\s]+$"
+                              },
+                              "ID":1,
+                              "IsToSave":false,
+                              "VersionNumber":null,
+                              "InstitutionCode":null,
+                              "SuccessMessage":null,
+                              "FailureMessage":null
+                           },
+                           "ParameterMode":"Custom",
+                           "ID":16145,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "IsCustom":false,
+                        "SourceContent":"",
+                        "RowNumber":1,
+                        "CustomSpec":null,
+                        "EntitySource":null,
+                        "TheMatchMode":0,
+                        "ID":36,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     {
+                        "Name":"Code",
+                        "Type":"ReadOnly",
+                        "DatasourceType":1,
+                        "SectionColumn":null,
+                        "Spec":{
+                           "IsRequired":true,
+                           "IsPrimaryIdentifier":false,
+                           "IsUnique":false,
+                           "IsEditable":false,
+                           "IsNotEditable":false,
+                           "FixedLength":0,
+                           "MinimumLength":0,
+                           "MaximumLength":0,
+                           "Format":{
+                              "Name":"AlphaNumeric",
+                              "RegexFormat":null,
+                              "Validation":{
+                                 "Name":"Regular Expression Validator",
+                                 "FullLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression, DejaVu.Automation.ValidationModule",
+                                 "LibraryPath":"DejaVu.ParameterValidation.RegEx.Module.dll",
+                                 "ShortLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression",
+                                 "ID":1,
+                                 "IsToSave":false,
+                                 "VersionNumber":null,
+                                 "InstitutionCode":null,
+                                 "SuccessMessage":null,
+                                 "FailureMessage":null
+                              },
+                              "ValidationFields":{
+                                 "RegularExpression":"^[-\\w\\s]+$"
+                              },
+                              "ID":1,
+                              "IsToSave":false,
+                              "VersionNumber":null,
+                              "InstitutionCode":null,
+                              "SuccessMessage":null,
+                              "FailureMessage":null
+                           },
+                           "ParameterMode":"Custom",
+                           "ID":16146,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "IsCustom":false,
+                        "SourceContent":"",
+                        "RowNumber":2,
+                        "CustomSpec":null,
+                        "EntitySource":null,
+                        "TheMatchMode":0,
+                        "ID":37,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     {
+                        "Name":"BIN",
+                        "Type":"ReadOnly",
+                        "DatasourceType":1,
+                        "SectionColumn":null,
+                        "Spec":{
+                           "IsRequired":false,
+                           "IsPrimaryIdentifier":false,
+                           "IsUnique":true,
+                           "IsEditable":false,
+                           "IsNotEditable":false,
+                           "FixedLength":0,
+                           "MinimumLength":0,
+                           "MaximumLength":0,
+                           "Format":{
+                              "Name":"AlphaNumeric",
+                              "RegexFormat":null,
+                              "Validation":{
+                                 "Name":"Regular Expression Validator",
+                                 "FullLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression, DejaVu.Automation.ValidationModule",
+                                 "LibraryPath":"DejaVu.ParameterValidation.RegEx.Module.dll",
+                                 "ShortLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression",
+                                 "ID":1,
+                                 "IsToSave":false,
+                                 "VersionNumber":null,
+                                 "InstitutionCode":null,
+                                 "SuccessMessage":null,
+                                 "FailureMessage":null
+                              },
+                              "ValidationFields":{
+                                 "RegularExpression":"^[-\\w\\s]+$"
+                              },
+                              "ID":1,
+                              "IsToSave":false,
+                              "VersionNumber":null,
+                              "InstitutionCode":null,
+                              "SuccessMessage":null,
+                              "FailureMessage":null
+                           },
+                           "ParameterMode":"Custom",
+                           "ID":16148,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "IsCustom":false,
+                        "SourceContent":"",
+                        "RowNumber":3,
+                        "CustomSpec":null,
+                        "EntitySource":null,
+                        "TheMatchMode":0,
+                        "ID":38,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     {
+                        "Name":"Phone",
+                        "Type":"ReadOnly",
+                        "DatasourceType":1,
+                        "SectionColumn":null,
+                        "Spec":{
+                           "IsRequired":false,
+                           "IsPrimaryIdentifier":false,
+                           "IsUnique":false,
+                           "IsEditable":false,
+                           "IsNotEditable":false,
+                           "FixedLength":0,
+                           "MinimumLength":0,
+                           "MaximumLength":0,
+                           "Format":{
+                              "Name":"Phone Number",
+                              "RegexFormat":null,
+                              "Validation":{
+                                 "Name":"Regular Expression Validator",
+                                 "FullLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression, DejaVu.Automation.ValidationModule",
+                                 "LibraryPath":"DejaVu.ParameterValidation.RegEx.Module.dll",
+                                 "ShortLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression",
+                                 "ID":1,
+                                 "IsToSave":false,
+                                 "VersionNumber":null,
+                                 "InstitutionCode":null,
+                                 "SuccessMessage":null,
+                                 "FailureMessage":null
+                              },
+                              "ValidationFields":{
+                                 "RegularExpression":"^[0-9+]{8,15}$"
+                              },
+                              "ID":5,
+                              "IsToSave":false,
+                              "VersionNumber":null,
+                              "InstitutionCode":null,
+                              "SuccessMessage":null,
+                              "FailureMessage":null
+                           },
+                           "ParameterMode":"Custom",
+                           "ID":16149,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "IsCustom":false,
+                        "SourceContent":"",
+                        "RowNumber":4,
+                        "CustomSpec":null,
+                        "EntitySource":null,
+                        "TheMatchMode":0,
+                        "ID":39,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     }
+                  ],
+                  "ID":17,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               },
+               {
+                  "Name":"sectionae15",
+                  "NumberOfColumn":0,
+                  "Parent":{
+                     "Name":"Bank Detail",
+                     "NumberOfColumn":2,
+                     "Parent":null,
+                     "RowNumber":1,
+                     "IsColumn":false,
+                     "Buttons":[
+
+                     ],
+                     "Fields":[
+
+                     ],
+                     "ID":16,
+                     "IsToSave":false,
+                     "VersionNumber":null,
+                     "InstitutionCode":null,
+                     "SuccessMessage":null,
+                     "FailureMessage":null
+                  },
+                  "RowNumber":1,
+                  "IsColumn":true,
+                  "Buttons":[
+
+                  ],
+                  "Fields":[
+                     {
+                        "Name":"Address",
+                        "Type":"ReadOnly",
+                        "DatasourceType":1,
+                        "SectionColumn":null,
+                        "Spec":{
+                           "IsRequired":true,
+                           "IsPrimaryIdentifier":false,
+                           "IsUnique":false,
+                           "IsEditable":false,
+                           "IsNotEditable":false,
+                           "FixedLength":0,
+                           "MinimumLength":0,
+                           "MaximumLength":0,
+                           "Format":{
+                              "Name":"String",
+                              "RegexFormat":null,
+                              "Validation":{
+                                 "Name":"Regular Expression Validator",
+                                 "FullLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression, DejaVu.Automation.ValidationModule",
+                                 "LibraryPath":"DejaVu.ParameterValidation.RegEx.Module.dll",
+                                 "ShortLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression",
+                                 "ID":1,
+                                 "IsToSave":false,
+                                 "VersionNumber":null,
+                                 "InstitutionCode":null,
+                                 "SuccessMessage":null,
+                                 "FailureMessage":null
+                              },
+                              "ValidationFields":{
+                                 "RegularExpression":"^.*$"
+                              },
+                              "ID":49,
+                              "IsToSave":false,
+                              "VersionNumber":null,
+                              "InstitutionCode":null,
+                              "SuccessMessage":null,
+                              "FailureMessage":null
+                           },
+                           "ParameterMode":"Custom",
+                           "ID":16147,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "IsCustom":false,
+                        "SourceContent":"",
+                        "RowNumber":1,
+                        "CustomSpec":null,
+                        "EntitySource":null,
+                        "TheMatchMode":0,
+                        "ID":40,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     {
+                        "Name":"Email",
+                        "Type":"ReadOnly",
+                        "DatasourceType":1,
+                        "SectionColumn":null,
+                        "Spec":{
+                           "IsRequired":false,
+                           "IsPrimaryIdentifier":false,
+                           "IsUnique":false,
+                           "IsEditable":false,
+                           "IsNotEditable":false,
+                           "FixedLength":0,
+                           "MinimumLength":0,
+                           "MaximumLength":0,
+                           "Format":{
+                              "Name":"Email",
+                              "RegexFormat":null,
+                              "Validation":{
+                                 "Name":"Regular Expression Validator",
+                                 "FullLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression, DejaVu.Automation.ValidationModule",
+                                 "LibraryPath":"DejaVu.ParameterValidation.RegEx.Module.dll",
+                                 "ShortLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression",
+                                 "ID":1,
+                                 "IsToSave":false,
+                                 "VersionNumber":null,
+                                 "InstitutionCode":null,
+                                 "SuccessMessage":null,
+                                 "FailureMessage":null
+                              },
+                              "ValidationFields":{
+                                 "RegularExpression":"^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$"
+                              },
+                              "ID":7,
+                              "IsToSave":false,
+                              "VersionNumber":null,
+                              "InstitutionCode":null,
+                              "SuccessMessage":null,
+                              "FailureMessage":null
+                           },
+                           "ParameterMode":"Custom",
+                           "ID":16150,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "IsCustom":false,
+                        "SourceContent":"",
+                        "RowNumber":2,
+                        "CustomSpec":null,
+                        "EntitySource":null,
+                        "TheMatchMode":0,
+                        "ID":41,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     {
+                        "Name":"IsActive",
+                        "Type":"ReadOnly",
+                        "DatasourceType":1,
+                        "SectionColumn":null,
+                        "Spec":null,
+                        "IsCustom":false,
+                        "SourceContent":"",
+                        "RowNumber":3,
+                        "CustomSpec":null,
+                        "EntitySource":null,
+                        "TheMatchMode":0,
+                        "ID":42,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     }
+                  ],
+                  "ID":18,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               }
+            ],
+            "Buttons":[
+
+            ],
+            "AllFields":[
+               {
+                  "Name":"Name",
+                  "Type":"ReadOnly",
+                  "DatasourceType":1,
+                  "SectionColumn":null,
+                  "Spec":{
+                     "IsRequired":true,
+                     "IsPrimaryIdentifier":false,
+                     "IsUnique":false,
+                     "IsEditable":false,
+                     "IsNotEditable":false,
+                     "FixedLength":0,
+                     "MinimumLength":0,
+                     "MaximumLength":0,
+                     "Format":{
+                        "Name":"AlphaNumeric",
+                        "RegexFormat":null,
+                        "Validation":{
+                           "Name":"Regular Expression Validator",
+                           "FullLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression, DejaVu.Automation.ValidationModule",
+                           "LibraryPath":"DejaVu.ParameterValidation.RegEx.Module.dll",
+                           "ShortLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression",
+                           "ID":1,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "ValidationFields":{
+                           "RegularExpression":"^[-\\w\\s]+$"
+                        },
+                        "ID":1,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     "ParameterMode":"Custom",
+                     "ID":16145,
+                     "IsToSave":false,
+                     "VersionNumber":null,
+                     "InstitutionCode":null,
+                     "SuccessMessage":null,
+                     "FailureMessage":null
+                  },
+                  "IsCustom":false,
+                  "SourceContent":"",
+                  "RowNumber":1,
+                  "CustomSpec":null,
+                  "EntitySource":null,
+                  "TheMatchMode":0,
+                  "ID":36,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               },
+               {
+                  "Name":"Code",
+                  "Type":"ReadOnly",
+                  "DatasourceType":1,
+                  "SectionColumn":null,
+                  "Spec":{
+                     "IsRequired":true,
+                     "IsPrimaryIdentifier":false,
+                     "IsUnique":false,
+                     "IsEditable":false,
+                     "IsNotEditable":false,
+                     "FixedLength":0,
+                     "MinimumLength":0,
+                     "MaximumLength":0,
+                     "Format":{
+                        "Name":"AlphaNumeric",
+                        "RegexFormat":null,
+                        "Validation":{
+                           "Name":"Regular Expression Validator",
+                           "FullLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression, DejaVu.Automation.ValidationModule",
+                           "LibraryPath":"DejaVu.ParameterValidation.RegEx.Module.dll",
+                           "ShortLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression",
+                           "ID":1,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "ValidationFields":{
+                           "RegularExpression":"^[-\\w\\s]+$"
+                        },
+                        "ID":1,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     "ParameterMode":"Custom",
+                     "ID":16146,
+                     "IsToSave":false,
+                     "VersionNumber":null,
+                     "InstitutionCode":null,
+                     "SuccessMessage":null,
+                     "FailureMessage":null
+                  },
+                  "IsCustom":false,
+                  "SourceContent":"",
+                  "RowNumber":2,
+                  "CustomSpec":null,
+                  "EntitySource":null,
+                  "TheMatchMode":0,
+                  "ID":37,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               },
+               {
+                  "Name":"BIN",
+                  "Type":"ReadOnly",
+                  "DatasourceType":1,
+                  "SectionColumn":null,
+                  "Spec":{
+                     "IsRequired":false,
+                     "IsPrimaryIdentifier":false,
+                     "IsUnique":true,
+                     "IsEditable":false,
+                     "IsNotEditable":false,
+                     "FixedLength":0,
+                     "MinimumLength":0,
+                     "MaximumLength":0,
+                     "Format":{
+                        "Name":"AlphaNumeric",
+                        "RegexFormat":null,
+                        "Validation":{
+                           "Name":"Regular Expression Validator",
+                           "FullLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression, DejaVu.Automation.ValidationModule",
+                           "LibraryPath":"DejaVu.ParameterValidation.RegEx.Module.dll",
+                           "ShortLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression",
+                           "ID":1,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "ValidationFields":{
+                           "RegularExpression":"^[-\\w\\s]+$"
+                        },
+                        "ID":1,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     "ParameterMode":"Custom",
+                     "ID":16148,
+                     "IsToSave":false,
+                     "VersionNumber":null,
+                     "InstitutionCode":null,
+                     "SuccessMessage":null,
+                     "FailureMessage":null
+                  },
+                  "IsCustom":false,
+                  "SourceContent":"",
+                  "RowNumber":3,
+                  "CustomSpec":null,
+                  "EntitySource":null,
+                  "TheMatchMode":0,
+                  "ID":38,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               },
+               {
+                  "Name":"Phone",
+                  "Type":"ReadOnly",
+                  "DatasourceType":1,
+                  "SectionColumn":null,
+                  "Spec":{
+                     "IsRequired":false,
+                     "IsPrimaryIdentifier":false,
+                     "IsUnique":false,
+                     "IsEditable":false,
+                     "IsNotEditable":false,
+                     "FixedLength":0,
+                     "MinimumLength":0,
+                     "MaximumLength":0,
+                     "Format":{
+                        "Name":"Phone Number",
+                        "RegexFormat":null,
+                        "Validation":{
+                           "Name":"Regular Expression Validator",
+                           "FullLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression, DejaVu.Automation.ValidationModule",
+                           "LibraryPath":"DejaVu.ParameterValidation.RegEx.Module.dll",
+                           "ShortLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression",
+                           "ID":1,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "ValidationFields":{
+                           "RegularExpression":"^[0-9+]{8,15}$"
+                        },
+                        "ID":5,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     "ParameterMode":"Custom",
+                     "ID":16149,
+                     "IsToSave":false,
+                     "VersionNumber":null,
+                     "InstitutionCode":null,
+                     "SuccessMessage":null,
+                     "FailureMessage":null
+                  },
+                  "IsCustom":false,
+                  "SourceContent":"",
+                  "RowNumber":4,
+                  "CustomSpec":null,
+                  "EntitySource":null,
+                  "TheMatchMode":0,
+                  "ID":39,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               },
+               {
+                  "Name":"Address",
+                  "Type":"ReadOnly",
+                  "DatasourceType":1,
+                  "SectionColumn":null,
+                  "Spec":{
+                     "IsRequired":true,
+                     "IsPrimaryIdentifier":false,
+                     "IsUnique":false,
+                     "IsEditable":false,
+                     "IsNotEditable":false,
+                     "FixedLength":0,
+                     "MinimumLength":0,
+                     "MaximumLength":0,
+                     "Format":{
+                        "Name":"String",
+                        "RegexFormat":null,
+                        "Validation":{
+                           "Name":"Regular Expression Validator",
+                           "FullLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression, DejaVu.Automation.ValidationModule",
+                           "LibraryPath":"DejaVu.ParameterValidation.RegEx.Module.dll",
+                           "ShortLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression",
+                           "ID":1,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "ValidationFields":{
+                           "RegularExpression":"^.*$"
+                        },
+                        "ID":49,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     "ParameterMode":"Custom",
+                     "ID":16147,
+                     "IsToSave":false,
+                     "VersionNumber":null,
+                     "InstitutionCode":null,
+                     "SuccessMessage":null,
+                     "FailureMessage":null
+                  },
+                  "IsCustom":false,
+                  "SourceContent":"",
+                  "RowNumber":1,
+                  "CustomSpec":null,
+                  "EntitySource":null,
+                  "TheMatchMode":0,
+                  "ID":40,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               },
+               {
+                  "Name":"Email",
+                  "Type":"ReadOnly",
+                  "DatasourceType":1,
+                  "SectionColumn":null,
+                  "Spec":{
+                     "IsRequired":false,
+                     "IsPrimaryIdentifier":false,
+                     "IsUnique":false,
+                     "IsEditable":false,
+                     "IsNotEditable":false,
+                     "FixedLength":0,
+                     "MinimumLength":0,
+                     "MaximumLength":0,
+                     "Format":{
+                        "Name":"Email",
+                        "RegexFormat":null,
+                        "Validation":{
+                           "Name":"Regular Expression Validator",
+                           "FullLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression, DejaVu.Automation.ValidationModule",
+                           "LibraryPath":"DejaVu.ParameterValidation.RegEx.Module.dll",
+                           "ShortLibraryName":"DejaVu.Automation.ValidationModule.ValidateRegularExpression",
+                           "ID":1,
+                           "IsToSave":false,
+                           "VersionNumber":null,
+                           "InstitutionCode":null,
+                           "SuccessMessage":null,
+                           "FailureMessage":null
+                        },
+                        "ValidationFields":{
+                           "RegularExpression":"^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$"
+                        },
+                        "ID":7,
+                        "IsToSave":false,
+                        "VersionNumber":null,
+                        "InstitutionCode":null,
+                        "SuccessMessage":null,
+                        "FailureMessage":null
+                     },
+                     "ParameterMode":"Custom",
+                     "ID":16150,
+                     "IsToSave":false,
+                     "VersionNumber":null,
+                     "InstitutionCode":null,
+                     "SuccessMessage":null,
+                     "FailureMessage":null
+                  },
+                  "IsCustom":false,
+                  "SourceContent":"",
+                  "RowNumber":2,
+                  "CustomSpec":null,
+                  "EntitySource":null,
+                  "TheMatchMode":0,
+                  "ID":41,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               },
+               {
+                  "Name":"IsActive",
+                  "Type":"ReadOnly",
+                  "DatasourceType":1,
+                  "SectionColumn":null,
+                  "Spec":null,
+                  "IsCustom":false,
+                  "SourceContent":"",
+                  "RowNumber":3,
+                  "CustomSpec":null,
+                  "EntitySource":null,
+                  "TheMatchMode":0,
+                  "ID":42,
+                  "IsToSave":false,
+                  "VersionNumber":null,
+                  "InstitutionCode":null,
+                  "SuccessMessage":null,
+                  "FailureMessage":null
+               }
+            ],
+            "Implementation":"DejaVu.UI",
+            "Category":{
+               "Name":"Bank Management",
+               "Description":"Bank Management",
+               "ID":5,
+               "IsToSave":false,
+               "VersionNumber":null,
+               "InstitutionCode":null,
+               "SuccessMessage":null,
+               "FailureMessage":null
+            },
+            "ID":12,
+            "IsToSave":false,
+            "VersionNumber":null,
+            "InstitutionCode":null,
+            "SuccessMessage":null,
+            "FailureMessage":null
          },
-         "Id":"b2184315-d837-4e40-b8d1-0e217e22101f",
-         "ServiceName":"DejaVu.UI",
-         "ServiceID":0,
-         "IsUI":false
+         "Events":null,
+         "Id":"0ec0e414-9f49-4a0c-9f12-d1d7487c11bb",
+         "ServiceName":"DejaVu.UI"
       }
    }
 }

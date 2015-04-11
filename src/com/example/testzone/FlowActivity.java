@@ -48,6 +48,8 @@ public class FlowActivity extends Activity {
 			
 			//Do whatever you want with step here\
 			
+			//Below log shows the name of commandname in step, get CommandObject with step.getCommandName();
+			Log.e(TAG, initStep.getCommandName().getCommandName());
 			
 			//
 			
@@ -63,6 +65,12 @@ public class FlowActivity extends Activity {
 					// TODO returns current step abstraction, current step and current step result
 					//Any manipulation you want can be done here with the objects
 					Log.e("OnStepResult", s.getStepId());
+					try {
+						Log.e("AttachedCommands", s.getCommands().toString(3));
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					return;
 				}
 				
