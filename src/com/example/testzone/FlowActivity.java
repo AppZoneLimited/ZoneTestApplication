@@ -8,6 +8,8 @@ import java.io.Reader;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.io.Writer;
+import java.util.HashMap;
+
 
 import org.json.JSONObject;
 
@@ -49,15 +51,19 @@ public class FlowActivity extends Activity {
 			//Do whatever you want with step here\
 			
 			//Below log shows the name of commandname in step, get CommandObject with step.getCommandName();
-			Log.e(TAG, initStep.getCommandName().getCommandName());
+			//Log.e(TAG, initStep.getCommandName().getCommandNameString());
 			
-			//
+			//Below log shows length of sections
+			//Log.e(TAG, initStep.getCommandName().getSections().size()+"");
+			
+			HashMap<String, String> sm = new HashMap<>();
+			sm.put("name", "boy");
 			
 			//Dummy result
-			JSONObject result = new JSONObject();
+			final JSONObject result = new JSONObject(sm);
 			
 			//Set step result
-			initStep.setStepResult(result, sa, new StepResultCallback() {
+			initStep.setStepResultCallBack(result, sa, new StepResultCallback() {
 				
 				@Override
 				public void onStepResult(StepsAbstraction stepAbstraction, Step s,
@@ -65,12 +71,6 @@ public class FlowActivity extends Activity {
 					// TODO returns current step abstraction, current step and current step result
 					//Any manipulation you want can be done here with the objects
 					Log.e("OnStepResult", s.getStepId());
-					try {
-						Log.e("AttachedCommands", s.getCommands().toString(3));
-					} catch (Exception e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
 					return;
 				}
 				
@@ -78,7 +78,32 @@ public class FlowActivity extends Activity {
 				public void onGetNextStep(Step nextStep) {
 					// TODO Auto-generated method stub
 					//Returns next step, you can proceed from here
-					Log.e("OnGetNextStep", nextStep.getStepId());
+					//Step nextStepNow = nextStep;
+					Log.e("OnGetNextStep2", nextStep.getStepId());
+					Log.e("PreviousStepResultFor1", nextStep.getPrevStepResult().toString());
+					
+					HashMap<String, String> sm = new HashMap<>();
+					sm.put("name", "GIRL");
+					
+					JSONObject cresult = new JSONObject(sm);
+					
+					nextStep.setStepResultCallBack(cresult, nextStep.getStepAbstract(), new StepResultCallback() {
+						
+						@Override
+						public void onStepResult(StepsAbstraction stepAbstraction, Step s,
+								JSONObject result) {
+							// TODO Auto-generated method stub
+							
+						}
+						
+						@Override
+						public void onGetNextStep(Step nextStep) {
+							// TODO Auto-generated method stub
+							Log.e("OnGetNextStep3", nextStep.getStepId());
+							Log.e("PreviousStepResultFor2", nextStep.getPrevStepResult().toString());
+						}
+					});
+					
 				}
 			});
 		} catch (Exception e) {
@@ -93,7 +118,7 @@ public class FlowActivity extends Activity {
 	 */
 	private String loadJson(Context ctx) {
 		String json = null;
-		InputStream is = ctx.getResources().openRawResource(R.raw.dejavujson);
+		InputStream is = ctx.getResources().openRawResource(R.raw.flow);
 		Writer writer = new StringWriter();
 		char[] buffer = new char[1024];
 		Reader reader = null;
