@@ -15,6 +15,7 @@ import com.appzone.zone.orchestra.engine.MobileFlow;
 import com.appzone.zone.orchestra.engine.datatypes.Step;
 import com.appzone.zone.orchestra.engine.datatypes.StepsAbstraction;
 import com.appzone.zone.orchestra.engine.interfaces.StepResultCallback;
+import com.appzone.zone.orchestra.engine.enums.StepTypeEnum;
 
 import android.app.Activity;
 import android.content.Context;
@@ -74,7 +75,7 @@ public class FlowActivity extends Activity {
 				}
 				
 				@Override
-				public void onGetNextStep(Step nextStep, JSONObject prevStepData) {
+				public void onGetNextStep(Step nextStep, JSONObject prevStepData, StepTypeEnum e, boolean canrollBack) {
 					// TODO Auto-generated method stub
 					//Returns next step, you can proceed from here
 					//Step nextStepNow = nextStep;

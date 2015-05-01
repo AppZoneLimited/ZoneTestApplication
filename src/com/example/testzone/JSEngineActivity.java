@@ -48,7 +48,7 @@ public class JSEngineActivity extends Activity {
 						@Override
 						public void onResult(String arg0) {
 							// TODO Auto-generated method stub
-							new AlertDialog.Builder(JSEngineActivity.this).setMessage(arg0).create().show();;
+							new AlertDialog.Builder(JSEngineActivity.this).setMessage(arg0).create().show();
 						}
 					});
 
