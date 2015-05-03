@@ -61,7 +61,7 @@ public class FlowActivity extends Activity {
 			final JSONObject result = new JSONObject(resultString);
 			
 			//Set step result
-			initStep.setStepResultCallBack(result, sa, new StepResultCallback() {
+			initStep.setStepEntityResultCallBack(result, sa, new StepResultCallback() {
 				
 				@Override
 				public void onStepResult(StepsAbstraction stepAbstraction, Step s,
@@ -120,7 +120,7 @@ public class FlowActivity extends Activity {
 	 */
 	private String loadJson(Context ctx) {
 		String json = null;
-		InputStream is = ctx.getResources().openRawResource(R.raw.walenewjson);
+		InputStream is = ctx.getResources().openRawResource(R.raw.entityflow);
 		Writer writer = new StringWriter();
 		char[] buffer = new char[1024];
 		Reader reader = null;
@@ -156,7 +156,7 @@ public class FlowActivity extends Activity {
 
 	private String loadResultJson(Context ctx) {
 		String json = null;
-		InputStream is = ctx.getResources().openRawResource(R.raw.result);
+		InputStream is = ctx.getResources().openRawResource(R.raw.entityresult);
 		Writer writer = new StringWriter();
 		char[] buffer = new char[1024];
 		Reader reader = null;
