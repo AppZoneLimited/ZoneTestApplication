@@ -16,7 +16,6 @@ import com.appzone.zone.orchestra.engine.datatypes.Step;
 import com.appzone.zone.orchestra.engine.datatypes.StepsAbstraction;
 import com.appzone.zone.orchestra.engine.interfaces.StepResultCallback;
 import com.appzone.zone.orchestra.engine.enums.StepTypeEnum;
-
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -49,10 +48,11 @@ public class FlowActivity extends Activity {
 			//Null is based on the assumption that the result has been set for the each step
 			Step initStep = sa.getNextStep();
 			
+			Log.e(TAG, initStep.getStepId());
 			//Do whatever you want with step here\
 			
 			//Below log shows the name of commandname in step, get CommandObject with step.getCommandName();
-			//Log.e(TAG, initStep.getCommandName().getCommandNameString());
+			//Log.e(TAG, initStep.getCommandNameString());
 			
 			//Below log shows length of sections
 			//Log.e(TAG, initStep.getCommandName().getSections().size()+"");
@@ -69,7 +69,7 @@ public class FlowActivity extends Activity {
 					// TODO returns current step abstraction, current step and current step result
 					//Any manipulation you want can be done here with the objects
 					
-					//Log.e("StepAttachedCommands", s.getEvents().getAttachedCommands().get(0).getCommandMappingsList().get(0).getJson().toString());
+					//Log.e("StepNextId", s.getNextStepId());
 					
 					return;
 				}
@@ -79,10 +79,12 @@ public class FlowActivity extends Activity {
 					// TODO Auto-generated method stub
 					//Returns next step, you can proceed from here
 					//Step nextStepNow = nextStep;
-					Log.e("OnGetNextStep2", nextStep.getStepId());
+					//Log.e("OnGetNextStep2", nextStep.getStepId());
 					Log.e("PreviousStepResultFor1", nextStep.getPrevStepResult().toString());
-					
+					Log.e("PrevStep", nextStep.getPreviousStep().getStepId());
 					Log.e("PrevStepData", prevStepData.toString());
+					Log.e("NextStepId", nextStep.getStepId());
+					//Log.e("Object", new Miscellaneous().getObjectStringFromJsonObject(prevStepData));
 					
 //					HashMap<String, String> sm = new HashMap<>();
 //					sm.put("name", "GIRL");
@@ -120,7 +122,7 @@ public class FlowActivity extends Activity {
 	 */
 	private String loadJson(Context ctx) {
 		String json = null;
-		InputStream is = ctx.getResources().openRawResource(R.raw.entityflow);
+		InputStream is = ctx.getResources().openRawResource(R.raw.entityjson2);
 		Writer writer = new StringWriter();
 		char[] buffer = new char[1024];
 		Reader reader = null;
@@ -156,7 +158,7 @@ public class FlowActivity extends Activity {
 
 	private String loadResultJson(Context ctx) {
 		String json = null;
-		InputStream is = ctx.getResources().openRawResource(R.raw.entityresult);
+		InputStream is = ctx.getResources().openRawResource(R.raw.entityresult2);
 		Writer writer = new StringWriter();
 		char[] buffer = new char[1024];
 		Reader reader = null;
