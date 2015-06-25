@@ -16,6 +16,7 @@ import com.appzone.zone.orchestra.engine.datatypes.Step;
 import com.appzone.zone.orchestra.engine.datatypes.StepsAbstraction;
 import com.appzone.zone.orchestra.engine.interfaces.StepResultCallback;
 import com.appzone.zone.orchestra.engine.enums.StepTypeEnum;
+
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -59,6 +60,7 @@ public class FlowActivity extends Activity {
 			
 			//Dummy result
 			final JSONObject result = new JSONObject(resultString);
+			//final JSONObject result2 = new JSONObject(load2ResultJson(this));
 			
 			//Set step result
 			initStep.setStepEntityResultCallBack(result, sa, new StepResultCallback() {
@@ -80,10 +82,10 @@ public class FlowActivity extends Activity {
 					//Returns next step, you can proceed from here
 					//Step nextStepNow = nextStep;
 					//Log.e("OnGetNextStep2", nextStep.getStepId());
-					Log.e("PreviousStepResultFor1", nextStep.getPrevStepResult().toString());
-					Log.e("PrevStep", nextStep.getPreviousStep().getStepId());
+//					Log.e("PreviousStepResultFor1", nextStep.getPrevStepResult().toString());
+//					Log.e("PrevStep", nextStep.getPreviousStep().getStepId());
 					Log.e("PrevStepData", prevStepData.toString());
-					Log.e("NextStepId", nextStep.getStepId());
+					//Log.e("NextStepId", nextStep.getStepId());
 					//Log.e("Object", new Miscellaneous().getObjectStringFromJsonObject(prevStepData));
 					
 //					HashMap<String, String> sm = new HashMap<>();
@@ -91,7 +93,7 @@ public class FlowActivity extends Activity {
 //					
 //					JSONObject cresult = new JSONObject(sm);
 					
-//					nextStep.setStepResultCallBack(cresult, nextStep.getStepAbstract(), new StepResultCallback() {
+//					nextStep.setStepEntityResultCallBack(result2, nextStep.getStepAbstract(), new StepResultCallback() {
 //						
 //						@Override
 //						public void onStepResult(StepsAbstraction stepAbstraction, Step s,
@@ -101,13 +103,15 @@ public class FlowActivity extends Activity {
 //						}
 //						
 //						@Override
-//						public void onGetNextStep(Step nextStep) {
+//						public void onGetNextStep(Step nextStep, JSONObject prevStepData, StepTypeEnum e, boolean canrollBack) {
 //							// TODO Auto-generated method stub
-//							Log.e("OnGetNextStep3", nextStep.getStepId());
-//							Log.e("PreviousStepResultFor2", nextStep.getPrevStepResult().toString());
+////							Log.e("OnGetNextStep3", nextStep.getStepId());
+////							Log.e("PreviousStepResultFor2", nextStep.getPrevStepResult().toString());
+//							Log.e("PrevStepData2", prevStepData.toString());
+//							Log.e("NextStepId2", nextStep.getStepId());
 //						}
 //					});
-					
+				
 				}
 			});
 		} catch (Exception e) {
@@ -122,7 +126,7 @@ public class FlowActivity extends Activity {
 	 */
 	private String loadJson(Context ctx) {
 		String json = null;
-		InputStream is = ctx.getResources().openRawResource(R.raw.entityjson2);
+		InputStream is = ctx.getResources().openRawResource(R.raw.oldflows);
 		Writer writer = new StringWriter();
 		char[] buffer = new char[1024];
 		Reader reader = null;
@@ -158,7 +162,45 @@ public class FlowActivity extends Activity {
 
 	private String loadResultJson(Context ctx) {
 		String json = null;
-		InputStream is = ctx.getResources().openRawResource(R.raw.entityresult2);
+		InputStream is = ctx.getResources().openRawResource(R.raw.result);
+		Writer writer = new StringWriter();
+		char[] buffer = new char[1024];
+		Reader reader = null;
+		try {
+
+			try {
+				reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			int n;
+			try {
+				while ((n = reader.read(buffer)) != -1) {
+					writer.write(buffer, 0, n);
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} finally {
+			try {
+				is.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		json = writer.toString();
+		return json;
+	}
+	
+	
+	@SuppressWarnings("unused")
+	private String load2ResultJson(Context ctx) {
+		String json = null;
+		InputStream is = ctx.getResources().openRawResource(R.raw.entityresult);
 		Writer writer = new StringWriter();
 		char[] buffer = new char[1024];
 		Reader reader = null;

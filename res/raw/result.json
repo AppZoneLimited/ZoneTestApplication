@@ -1,1 +1,1 @@
-{"EventName":"Save Clicked", "EventData":{ "Bank":"emma", "Code":"2","Address":"Aba"}}
+{"EventName":"Next Clicked","EventData":{"Card Request":{"Delivery Mode":"Postal Delivery","Card Type":"MasterCard"}}}
